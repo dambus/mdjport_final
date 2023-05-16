@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Milan Đumić :: developer</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      async
+      src="https://kit.fontawesome.com/c9219fe591.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript"src="ast/json/projects.json"></script>
+    <script type="module" src="ast/js/main_es5.js"></script>
+    <script type="module" src="ast/js/popProjects_es5.js"></script>
+    <script type="module" src="ast/js/modal_es5.js"></script>
+
+    <link rel="stylesheet" href="ast/css/main.css" />
+  </head>
+  <body>
+    <!-- MODAL window multipurpose -->
+    <div
+      class="modal fade"
+      id="multiModal"
+      tabindex="-1"
+      aria-labelledby="multiModal"
+      aria-hidden="true"
+      data-bs-keyboard="false"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content" id="modalContent">
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button href="#" class="closeModal" data-bs-dismiss="modal">
+              close <span><i class="fa-regular fa-circle-xmark"></i></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MODAL END  -->
+    <!-- SIDEBAR start-->
+    <div class="sidebar-left">
+      <div class="sidebar-left--content">
+        <a
+          href="https://github.com/dambus"
+          target="_blank"
+          class="fa-brands fa-github"
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/milandjumic/"
+          target="_blank"
+          class="fa-brands fa-linkedin"
+        ></a>
+        <a
+          href="https://www.instagram.com/dambusns/"
+          target="_blank"
+          class="fa-brands fa-instagram"
+        ></a>
+        <a
+          href="https://www.facebook.com/milandjumic"
+          class="fa-brands fa-facebook"
+          target="_blank"
+        ></a>
+        <a href="mailto:dambusns@gmail.com" class="fa-solid fa-at"></a>
+      </div>
+    </div>
+    <!-- END Sidebar -->
+    <!-- SIDEBAR END -->
+
+    <header class="header">
+      <div class="container-fluid mobile-nav-items hidden no-opacity">
+        <img src="ast/img/mdjlogo.png" alt="" class="mobile-nav-items--logo" />
+        <a href="#welcome" class="mobile-nav-items--item no-opacity"
+          ><i class="fa-solid fa-house mobile-nav-items--icon"></i>Home</a
+        >
+        <a href="#work" class="mobile-nav-items--item no-opacity"
+          ><i class="fa-solid fa-briefcase mobile-nav-items--icon"></i>Work</a
+        >
+        <a href="#skills" class="mobile-nav-items--item no-opacity"
+          ><i class="fa-solid fa-gear mobile-nav-items--icon"></i>Skills</a
+        >
+        <a href="#about" class="mobile-nav-items--item no-opacity"
+          ><i class="fa-solid fa-user mobile-nav-items--icon"></i>About</a
+        >
+        <div class="social">
+          <a
+            href="https://github.com/dambus"
+            target="_blank"
+            class="fa-brands fa-github"
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/milandjumic/"
+            target="_blank"
+            class="fa-brands fa-linkedin"
+          ></a>
+          <a
+            href="https://www.instagram.com/dambusns/"
+            target="_blank"
+            class="fa-brands fa-instagram"
+          ></a>
+          <a
+            href="https://www.facebook.com/milandjumic"
+            class="fa-brands fa-facebook"
+            target="_blank"
+          ></a>
+          <a href="mailto:dambusns@gmail.com" class="fa-solid fa-at"></a>
+        </div>
+      </div>
+
+      <div class="header container" id="top-of-page">
+        <img src="ast/img/mdjlogo.png" alt="logo" class="header__logo" />
+        <div class="nav__mobile container-fluid">
+          <div class="nav__mobile--menu-icon">
+            <div class="toggle-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav">
+          <div class="nav__item">
+            <a href="#welcome" class="btn__nav" data-anchor="#welcome">home</a>
+          </div>
+          <div class="nav__item">
+            <a href="#work" class="btn__nav" data-anchor="#work">work</a>
+          </div>
+          <div class="nav__item">
+            <a href="#skills" class="btn__nav" data-anchor="#skills">good@</a>
+          </div>
+          <div class="nav__item">
+            <a href="#about" class="btn__nav" data-anchor="#about">about</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section id="welcome" class="container">
+      <div class="v-spacer"></div>
+      <div class="row hero">
+        <div class="col-xs-12 col-md-6">
+          <img src="ast/img/coding_laptop_coffee.png" alt="" class="img-fluid">
+        </div>
+        <div class="col-xs-12 col-md-6 text-center text-sm-start">
+          <h4 class="fw-light">hi, my name is</h4>
+          <h1 class="text-uppercase display-2 lh-1"><span class="fw-bold">Milan</span> <small>and</small><br>i <span class="fw-bold">design</span> and <br><span class="fw-bold">code</span> cool <br> <span class="fw-bold">stuff </span>for web</h1>
+          <div class="col-12 cta">
+            <a
+              href="#work"
+              class="link-btn mt-3 mx-auto mx-sm-0 text-center text-sm-start w-50"
+              >see my work<span><i class="fa-solid fa-circle-arrow-right"></i></span
+            ></a>
+           
+          </div>
+        </div>
+
+      </div>
+      
+    </section>
+    <section id="work" class="work container">
+      <div class="section__heading">
+        <h1>my work.</h1>
+      </div>
+      <div class="section__content">
+        <div class="cards" id="projectCards"></div>
+      </div>
+    </section>
+    <!-- SKILLS section -->
+    <section id="skills" class="skills container">
+      <div class="section__heading">
+        <h1>skills.</h1>
+      </div>
+      <div class="section__content container">
+        <div class="row">
+          <div class="col-xs-12 col-md-6 text-end">
+            <h4 class="fw-light">considered to be:</h4>
+            <h1 class="display-2">CREATIVE</h1>
+            <h1 class="display-2"><small class="fw-light">SOMEWHAT</small> TALENTED</h1>
+            <h1 class="display-2">
+              OUT OF THE BOX <br />
+              THINKER
+            </h1>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <div class="row g-3 d-flex mb-xs-5">              
+                <img src="ast/img/idea_bulb.png" alt="" class="w-50 img-fluid" />
+                <img src="ast/img/box-guy.png" alt="" class="img-fluid w-50"/>
+            </div>
+          </div>
+         
+        </div>
+        <div class="row mt-3 mt-xs-5 d-flex">
+          <div class="col-xs-12 col-md-6 text-end">
+            <h4 class="fw-light">great communicator with:</h4>
+            <h2 class="display-2 ">COMPUTERS,</h1>
+            <h2 class="display-2">GOOGLE</h1>
+            <h1 class="d-inline display-2"><small>AND </small>MOST HUMANS</h1>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <div class="row g-3 d-flex">              
+                <img src="ast/img/image 3.png" alt="" class="w-100 img-fluid" />
+              </div>
+          </div>
+         
+        </div>
+        <div class="row d-flex mt-5">
+          <div class="v-spacer"></div>
+          <div class="col-6 offset-3 mt-5 mb-3">
+            <h4 class="fw-light text-center text-sm-end">Oh, yeah</h4>
+            <h2 class="display-4 text-center text-sm-end text-uppercase">I also know a <span class="fw-bold">few things</span> about</h2>
+          </div>
+          <div class="tech-icons col-10 offset-1 col-sm-6 offset-sm-3">
+            <div class="skills__box">
+              <div class="skills__box--skill-icon">
+                <div class="badge_good">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                </div>
+                <i class="fa-brands fa-html5"></i>
+              </div>
+              <div class="skills__box--skill-icon">
+                <div class="badge_good">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                </div>
+                <i class="fa-brands fa-css3-alt"></i>
+              </div>
+              <div class="skills__box--skill-icon">
+                <i class="fa-brands fa-sass"></i>
+              </div>
+              <div class="skills__box--skill-icon">
+                <div class="badge_ok">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <i class="fa-brands fa-square-js"></i>
+              </div>
+              <div class="skills__box--skill-icon">
+                <div class="badge_learning">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <i class="fa-brands fa-react"></i>
+              </div>
+              <div class="skills__box--skill-icon">
+                <i class="fa-brands fa-figma"></i>
+              </div>
+            </div>
+        </div>
+        
+    </section>
+    <section id="about" class="skills container">
+      <div class="section__heading">
+        <h1>about.</h1>
+      </div>
+      <div class="section__content row d-flex">
+        <div class="col-xs-12 col-md-6">
+          <img src="ast/img/dev_meeting.png" alt="" class="shadowed img-fluid" />
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <h4 class="fw-light">Hello everyone,</h4>
+          <h1 class="text-uppercase text-start display-3 lh-1">
+            My name is <br> <span class="fw-bold">MILAN</span> and I'm a <span class="fw-bold">DEVELOPER</span>,
+            <span class="fw-bold">GAMER</span> and a <span class="fw-bold">GEEK</span>
+          </h1>
+          <!-- <h6>[ AA meeting vibes... ]</h6> -->
+          <figure>
+            <!-- <blockquote class="blockquote">
+              <p>A well-known quote, contained in a blockquote element.</p>
+            </blockquote> -->
+            <figcaption class="blockquote-footer mt-1">
+              So much AA meeting vibe here...
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-xs-12 col-sm-6 offset-md-6 mt-3 content-text-l">
+          <h4 class="display-6">I like to create interesting things for web.</h4>
+          <p class="justify">
+            <br />
+            While i don't lack creativity, I may lack a bit of professional
+            experience. Going to change that soon. I've started playing with
+            HTML and CSS in early 2000's, but life took me on a totally
+            different path. Although, love for design and web development never
+            faded. <br> If you are interested to learn more about me, or want to talk
+            about your next project, check out links below.
+          </p>
+          <div class="v-spacer"></div>
+          <a
+            href="#"
+            class="link-btn mod-btn"
+            data-mod-content="/pages/about.html"
+            data-bs-toggle="modal"
+            data-bs-target="#multiModal"
+            >read more
+            <span><i class="fa-solid fa-circle-arrow-right"></i></span
+          ></a>
+          <a
+            href="#"
+            data-mod-content="/pages/contact-form.html"
+            class="link-btn mod-btn"
+            data-bs-toggle="modal"
+            data-bs-target="#multiModal"
+            >your next web project?
+            <span><i class="fa-solid fa-circle-arrow-right"></i></span
+          ></a>
+          <a href="#" class="link-btn"
+            >buy me a coffe
+            <span><i class="fa-solid fa-circle-arrow-right"></i></span
+          ></a>
+        </div>
+      </div>
+    </section>
+    <!-- BOOTSTRAP script CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

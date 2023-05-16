@@ -1,0 +1,29 @@
+.hero {
+  border-radius: 6rem;
+  background: linear-gradient(180deg, #282a73 25%, #262b64 50%, #202d3a 75%);
+
+  & > :first-child {
+    margin-top: 2rem;
+    border-radius: 2rem;
+  }
+
+  & > :nth-child(2) {
+    h1 {
+      span {
+        color: $light-cyan;
+      }
+    }
+    .cta {
+      margin-left: 1.5rem;
+      @include md {
+        margin-left: 0;
+        margin-top: 5rem;
+      }
+    }
+  }
+
+  @include sm {
+    padding-top: 5rem;
+    background: linear-gradient(180deg, #282a73 45%, #262b64 60%, #202d3a 70%);
+  }
+}

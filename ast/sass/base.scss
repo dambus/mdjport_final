@@ -1,0 +1,274 @@
+@import "bpoints";
+@import "colors";
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;700;900&display=swap");
+
+$font-main: "Source Sans Pro", sans-serif;
+$nav-height: 6rem;
+
+// CSS RESET
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: $gunmetal;
+  min-height: calc(100vh - 2 * 4vw);
+  color: $white;
+  font-family: $font-main;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  min-height: calc(100vh - $nav-height);
+  margin-bottom: 20vw !important;
+}
+
+.landing {
+  width: 100%;
+}
+
+.section__heading {
+  display: flex;
+  justify-content: center;
+  h1 {
+    background-color: $light-cyan;
+    color: $gunmetal;
+    transform: rotate(-2deg);
+    padding: 6% 4%;
+    margin-top: -6px;
+    margin-bottom: 10vw;
+    font-size: clamp(2rem, 1.1923rem + 2.2436vw, 2.875rem);
+    border-radius: 16px;
+    @include md {
+      padding: 2% 2.5%;
+      font-size: clamp(2rem, 1.1923rem + 2.2436vw, 2.875rem);
+      margin-bottom: 10vw;
+    }
+  }
+}
+
+.section__content {
+  margin-top: 2rem;
+  // display: flex;
+
+  &--left {
+    flex: 50%;
+  }
+}
+
+section {
+  min-height: calc(100vh - 1rem);
+  margin-bottom: 20vw !important;
+  scroll-margin-top: -10px;
+  @include md {
+    scroll-margin-top: 6rem;
+  }
+}
+
+small {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.shadowed {
+  max-width: 95%;
+  margin: 0 auto;
+  filter: drop-shadow(-16px -16px 0px #daf0ee);
+}
+
+article {
+  margin: 5vw auto;
+}
+
+.content-text-r {
+  text-align: right;
+  h4 {
+    font-weight: 200;
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 2.6rem;
+    line-height: 1.1;
+    span {
+      color: $tiffany-blue;
+      font-size: 120%;
+    }
+  }
+
+  @include md {
+    h1 {
+      font-size: 3.6rem;
+    }
+  }
+}
+
+.content-text-l {
+  text-align: left;
+  h4 {
+    font-weight: 200;
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 2.6rem;
+    line-height: 1.1;
+    span {
+      color: $tiffany-blue;
+      font-size: 120%;
+    }
+  }
+
+  @include md {
+    h1 {
+      font-size: 3.6rem;
+    }
+  }
+}
+
+.gal {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 40vh 25vh;
+  grid-gap: 1rem;
+
+  &__1-1 {
+    grid-area: 1 / 1 / 2 / 2;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__1-2 {
+    grid-area: 1 / 2 / 2 / 2;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__2-1 {
+    grid-area: 2 / 1 / 3 / 3;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.v-spacer {
+  width: 100%;
+  height: 2rem;
+  @include md {
+    height: 3rem;
+  }
+}
+
+.link-btn {
+  position: relative;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+
+  // border: 1px solid $light-cyan;
+
+  i {
+    position: absolute;
+    color: $tiffany-blue;
+    font-size: 0.8125rem;
+    margin-left: 6px;
+    transform-origin: left;
+    transform: translateX(0);
+    transition: all 0.25s ease;
+    top: 31.5%;
+  }
+
+  &:hover {
+    transition: all 0.25s ease;
+    color: $ash-gray;
+
+    i {
+      transform: translateX(6px) scale(1.2);
+      top: 31%;
+    }
+  }
+}

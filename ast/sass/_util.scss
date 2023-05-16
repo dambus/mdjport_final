@@ -1,0 +1,32 @@
+.hidden {
+  display: none;
+  transition: 0.5s;
+}
+
+.no-opacity {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.from-right {
+  transform: translateX(-300px);
+  transition: 0.5s;
+}
+
+.sticky {
+  @include md {
+    position: sticky;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.active {
+  text-transform: uppercase;
+
+  color: $ash-gray;
+
+  transition: none !important;
+}
