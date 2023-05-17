@@ -1,0 +1,23 @@
+// GENERAL
+* section heading dizajnirati novi
+* dodati marginu na kraju sekcije
+* dodati text-justify gde treba
+
+//HEADER / welcome
+* smanjiti logo i margine top i bottom da se vidi cela sekcija, zauzima previse prostora
+* napraviti da logo bude vidljiviji (pronaci gde je psd fajl)
+
+
+
+//SHOWCASE MY WORK
+* napraviti grid za my work showcase
+  - pregledati CSS za kartice, ne mogu sve da stanu vertikalno na manjim ekranima
+
+//SKILLS
+* smanjiti line-height u tekstu
+* tech ikonice smanjiti font za XS uredjaje (na iphone10 se prelamaju u dva reda)
+
+
+//ABOUT 
+* dodati marginu ispod slike kad se gleda na mobu
+
